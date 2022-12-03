@@ -1,0 +1,15 @@
+{
+  "name": "showtimes",
+  "version": "0.1.0",
+  "description": "Movie showtimes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "happy-dom": "^7.7.0",
+    "minimist": "^1.2.7"
+  }
+}
