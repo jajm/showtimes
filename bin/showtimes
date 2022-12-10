@@ -27,6 +27,7 @@ async function main () {
 
     const [lon, lat] = coordinates;
     const theaters = await getTheatersWithin(lat, lon, maxDistance * 1000);
+    theaters.sort((t1, t2) => t1.distance - t2.distance);
 
     if (theaters.length === 0) {
         console.error('No theaters found nearby. Try a greater value for --max-distance');
@@ -39,7 +40,7 @@ async function main () {
             continue;
         }
 
-        console.group(theater.name);
+        console.group(`${theater.name} (${(theater.distance / 1000).toFixed(1)}km));
         for (const movie of movies) {
             if (!movie.movie) {
                 continue;
