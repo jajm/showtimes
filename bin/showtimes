@@ -40,7 +40,7 @@ async function main () {
             continue;
         }
 
-        console.group(`${theater.name} (${(theater.distance / 1000).toFixed(1)}km));
+        console.group(`${theater.name} (${(theater.distance / 1000).toFixed(1)}km)`);
         for (const movie of movies) {
             if (!movie.movie) {
                 continue;
